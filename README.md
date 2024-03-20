@@ -3,19 +3,19 @@
 Require it in the Composer.
 
 ```bash
-composer require devleaptech/laravel-h5p
+composer require Hareom284/laravel-h5p
 ```
 
 Publish the Views, Config and so things.
 
 ```bash
-php artisan vendor:publish --provider="Devleaptech\LaravelH5p\LaravelH5pServiceProvider"
+php artisan vendor:publish --provider="Hareom284\LaravelH5p\LaravelH5pServiceProvider"
 ```
 
 Migrate the Database
 
 ```bash
-php artisan migrate --package=vendor/devleaptech/laravel-h5p
+php artisan migrate --package=vendor/Hareom284/laravel-h5p
 ```
 
 Add to Composer-Classmap:
@@ -37,7 +37,7 @@ Add to Composer-Classmap:
 
 ```php
 'providers' => [
-    Devleaptech\LaravelH5p\LaravelH5pServiceProvider::class,
+    Hareom284\LaravelH5p\LaravelH5pServiceProvider::class,
 ];
 ```
 

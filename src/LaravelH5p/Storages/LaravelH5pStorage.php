@@ -10,7 +10,7 @@
  *
  */
 
-namespace Devleaptech\LaravelH5p\Storages;
+namespace Hareom284\LaravelH5p\Storages;
 
 use H5PFileStorage;
 

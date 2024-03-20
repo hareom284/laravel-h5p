@@ -1,14 +1,14 @@
 <?php
 
-namespace Devleaptech\LaravelH5p\Http\Controllers;
+namespace Hareom284\LaravelH5p\Http\Controllers;
 
 use Src\Common\Infrastructure\Laravel\Controller;
 use H5PEditorEndpoints;
-use Devleaptech\LaravelH5p\Eloquents\H5pContentsUserData;
-use Devleaptech\LaravelH5p\Eloquents\H5pLibrary;
-use Devleaptech\LaravelH5p\Eloquents\H5pResult;
-use Devleaptech\LaravelH5p\Eloquents\H5pTmpfile;
-use Devleaptech\LaravelH5p\Events\H5pEvent;
+use Hareom284\LaravelH5p\Eloquents\H5pContentsUserData;
+use Hareom284\LaravelH5p\Eloquents\H5pLibrary;
+use Hareom284\LaravelH5p\Eloquents\H5pResult;
+use Hareom284\LaravelH5p\Eloquents\H5pTmpfile;
+use Hareom284\LaravelH5p\Events\H5pEvent;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\App;
 use Log;

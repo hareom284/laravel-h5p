@@ -1,10 +1,10 @@
 <?php
 
-namespace Devleaptech\LaravelH5p;
+namespace Hareom284\LaravelH5p;
 
-use Devleaptech\LaravelH5p\Commands\MigrationCommand;
-use Devleaptech\LaravelH5p\Commands\ResetCommand;
-use Devleaptech\LaravelH5p\Helpers\H5pHelper;
+use Hareom284\LaravelH5p\Commands\MigrationCommand;
+use Hareom284\LaravelH5p\Commands\ResetCommand;
+use Hareom284\LaravelH5p\Helpers\H5pHelper;
 
 class LaravelH5pServiceProvider extends \Illuminate\Support\ServiceProvider
 {
@@ -16,8 +16,8 @@ class LaravelH5pServiceProvider extends \Illuminate\Support\ServiceProvider
      * @var array
      */
     protected $listen = [
-        'Devleaptech\LaravelH5p\Events\H5pEvent' => [
-            'Devleaptech\LaravelH5p\Listeners\H5pNotification',
+        'Hareom284\LaravelH5p\Events\H5pEvent' => [
+            'Hareom284\LaravelH5p\Listeners\H5pNotification',
         ],
     ];
 

@@ -10,7 +10,7 @@
  *
  */
 
-namespace Devleaptech\LaravelH5p;
+namespace Hareom284\LaravelH5p;
 
 use H5PContentValidator;
 use H5PCore;
@@ -25,10 +25,10 @@ use H5PValidator;
 //use H5PEditorAjaxInterface;
 //use H5peditorFile;
 //use H5peditorStorage;
-use Devleaptech\LaravelH5p\Repositories\EditorAjaxRepository;
-use Devleaptech\LaravelH5p\Repositories\LaravelH5pRepository;
-use Devleaptech\LaravelH5p\Storages\EditorStorage;
-use Devleaptech\LaravelH5p\Storages\LaravelH5pStorage;
+use Hareom284\LaravelH5p\Repositories\EditorAjaxRepository;
+use Hareom284\LaravelH5p\Repositories\LaravelH5pRepository;
+use Hareom284\LaravelH5p\Storages\EditorStorage;
+use Hareom284\LaravelH5p\Storages\LaravelH5pStorage;
 use Illuminate\Support\Facades\Auth;
 
 //H5P_Plugin

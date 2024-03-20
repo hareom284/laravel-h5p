@@ -1,6 +1,6 @@
 <?php
 
-namespace Devleaptech\LaravelH5p\Eloquents;
+namespace Hareom284\LaravelH5p\Eloquents;
 
 use App\User;
 use DB;

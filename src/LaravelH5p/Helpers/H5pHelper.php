@@ -10,7 +10,7 @@
  *
  */
 
-namespace Devleaptech\LaravelH5p\Helpers;
+namespace Hareom284\LaravelH5p\Helpers;
 
 class H5pHelper
 {

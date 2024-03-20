@@ -10,21 +10,21 @@
  *
  */
 
-namespace Devleaptech\LaravelH5p\Repositories;
+namespace Hareom284\LaravelH5p\Repositories;
 
 use Carbon\Carbon;
 use DB;
 use GuzzleHttp\Client;
 use H5PFrameworkInterface;
 use H5PPermission;
-use Devleaptech\LaravelH5p\Eloquents\H5pContent;
-use Devleaptech\LaravelH5p\Eloquents\H5pContentsLibrary;
-use Devleaptech\LaravelH5p\Eloquents\H5pContentsUserData;
-use Devleaptech\LaravelH5p\Eloquents\H5pLibrariesLibrary;
-use Devleaptech\LaravelH5p\Eloquents\H5pLibrary;
-use Devleaptech\LaravelH5p\Eloquents\H5pResult;
-use Devleaptech\LaravelH5p\Events\H5pEvent;
-use Devleaptech\LaravelH5p\Helpers\H5pHelper;
+use Hareom284\LaravelH5p\Eloquents\H5pContent;
+use Hareom284\LaravelH5p\Eloquents\H5pContentsLibrary;
+use Hareom284\LaravelH5p\Eloquents\H5pContentsUserData;
+use Hareom284\LaravelH5p\Eloquents\H5pLibrariesLibrary;
+use Hareom284\LaravelH5p\Eloquents\H5pLibrary;
+use Hareom284\LaravelH5p\Eloquents\H5pResult;
+use Hareom284\LaravelH5p\Events\H5pEvent;
+use Hareom284\LaravelH5p\Helpers\H5pHelper;
 use Illuminate\Support\Facades\App;
 use PDO;
 

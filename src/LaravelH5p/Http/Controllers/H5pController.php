@@ -1,13 +1,13 @@
 <?php
 
-namespace Devleaptech\LaravelH5p\Http\Controllers;
+namespace Hareom284\LaravelH5p\Http\Controllers;
 
 use Src\Common\Infrastructure\Laravel\Controller;
 use H5pCore;
-use Devleaptech\LaravelH5p\Eloquents\H5pContent;
-use Devleaptech\LaravelH5p\Eloquents\H5pTmpfile;
-use Devleaptech\LaravelH5p\Events\H5pEvent;
-use Devleaptech\LaravelH5p\Exceptions\H5PException;
+use Hareom284\LaravelH5p\Eloquents\H5pContent;
+use Hareom284\LaravelH5p\Eloquents\H5pTmpfile;
+use Hareom284\LaravelH5p\Events\H5pEvent;
+use Hareom284\LaravelH5p\Exceptions\H5PException;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Auth;

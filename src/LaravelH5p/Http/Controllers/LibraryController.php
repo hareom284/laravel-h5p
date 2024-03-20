@@ -1,12 +1,12 @@
 <?php
 
-namespace Devleaptech\LaravelH5p\Http\Controllers;
+namespace Hareom284\LaravelH5p\Http\Controllers;
 
 use Src\Common\Infrastructure\Laravel\Controller;
 use DB;
 use H5PCore;
-use Devleaptech\LaravelH5p\Eloquents\H5pContent;
-use Devleaptech\LaravelH5p\Eloquents\H5pLibrary;
+use Hareom284\LaravelH5p\Eloquents\H5pContent;
+use Hareom284\LaravelH5p\Eloquents\H5pLibrary;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\App;
 use Log;

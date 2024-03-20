@@ -1,6 +1,6 @@
 <?php
 
-namespace Devleaptech\LaravelH5p\Commands;
+namespace Hareom284\LaravelH5p\Commands;
 
 use Illuminate\Console\Command;
 

@@ -10,10 +10,10 @@
  *
  */
 
-namespace Devleaptech\LaravelH5p\Events;
+namespace Hareom284\LaravelH5p\Events;
 
 use H5PEventBase;
-use Devleaptech\LaravelH5p\Eloquents\H5pEventLog;
+use Hareom284\LaravelH5p\Eloquents\H5pEventLog;
 use Illuminate\Support\Facades\Auth;
 
 //use Illuminate\Contracts\Events;

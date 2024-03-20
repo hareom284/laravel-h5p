@@ -10,12 +10,12 @@
  *
  */
 
-namespace Devleaptech\LaravelH5p\Repositories;
+namespace Hareom284\LaravelH5p\Repositories;
 
 use DB;
 use H5PEditorAjaxInterface;
-use Devleaptech\LaravelH5p\Eloquents\H5pLibrariesHubCache;
-use Devleaptech\LaravelH5p\Eloquents\H5pLibrary;
+use Hareom284\LaravelH5p\Eloquents\H5pLibrariesHubCache;
+use Hareom284\LaravelH5p\Eloquents\H5pLibrary;
 
 class EditorAjaxRepository implements H5PEditorAjaxInterface
 {

@@ -1,5 +1,5 @@
 {
-    "name": "devleaptech/laravel-h5p",
+    "name": "hareom284/laravel-h5p",
     "version": "1.0",
     "description": "This is laravel h5p plugin that use for content edition",
     "type": "library",
@@ -11,12 +11,12 @@
     "license": "MIT",
     "autoload": {
         "psr-4": {
-            "Devleaptech\\LaravelH5p\\": "src/LaravelH5p"
+            "Hareom284\\LaravelH5p\\": "src/LaravelH5p"
         }
     },
     "authors": [
         {
-            "name": "devleaptech"
+            "name": "Hareom284"
         }
     ],
     "require-dev": {
@@ -31,10 +31,10 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Devleaptech\\LaravelH5p\\LaravelH5pServiceProvider"
+                "Hareom284\\LaravelH5p\\LaravelH5pServiceProvider"
             ],
             "aliases": {
-                "LaravelH5p": "Devleaptech\\LaravelH5p\\Facades"
+                "LaravelH5p": "Hareom284\\LaravelH5p\\Facades"
             }
         }
     }
