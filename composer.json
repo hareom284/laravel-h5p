@@ -1,0 +1,41 @@
+{
+    "name": "devleaptech/laravel-h5p",
+    "version": "1.0",
+    "description": "This is laravel h5p plugin that use for content edition",
+    "type": "library",
+    "require": {
+        "php": "^8.0",
+        "laravel/framework": "^9.19",
+        "guzzlehttp/guzzle": "^7.7"
+    },
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Devleaptech\\LaravelH5p\\": "src/LaravelH5p"
+        }
+    },
+    "authors": [
+        {
+            "name": "devleaptech"
+        }
+    ],
+    "require-dev": {
+        "fzaninotto/faker": "^1.5",
+        "mockery/mockery": "^1.6",
+        "phpunit/phpunit": "^10.2",
+        "kitloong/laravel-migrations-generator": "^6.10",
+        "laravel/pint": "^1.10"
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Devleaptech\\LaravelH5p\\LaravelH5pServiceProvider"
+            ],
+            "aliases": {
+                "LaravelH5p": "Devleaptech\\LaravelH5p\\Facades"
+            }
+        }
+    }
+}
