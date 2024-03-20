@@ -1,6 +1,6 @@
 # H5P Plugin for Laravel Framework
 
-Require it in the Composer.
+Require it in the Composer
 
 ```bash
 composer require Hareom284/laravel-h5p
