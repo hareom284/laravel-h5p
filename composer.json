@@ -5,7 +5,7 @@
     "type": "library",
     "require": {
         "php": "^8.0",
-        "laravel/framework": "^9.19",
+        "laravel/framework": "^9.19|^10.0",
         "guzzlehttp/guzzle": "^7.7"
     },
     "license": "MIT",
