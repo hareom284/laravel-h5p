@@ -9,7 +9,9 @@
 
             <div class="panel panel-primary">
 
-                {!! Form::open(['route' => ['h5p.library.store'], 'id'=>'h5p-library-form', 'class'=>'form-horizontal', 'enctype'=>"multipart/form-data"]) !!}
+               <form method="POST" action="{{ route('h5p.library.store') }}" id="h5p-library-form" class="form-horizontal" enctype="multipart/form-data">
+                  @csrf
+
                 <div class="panel-body">
 
                     <div class="form-group {{ $errors->has('h5p_file') ? 'has-error' : '' }}" style="margin-bottom: 0px;">
@@ -43,7 +45,7 @@
                 <div class="panel-footer">
                     <input type="submit" name="submit" value="{{ trans('laravel-h5p.library.upload') }}" class="btn btn-primary">
                 </div>
-                {!! Form::close() !!}
+              </form>
 
             </div>
 
@@ -51,7 +53,9 @@
         <div class="col-md-3 mt-4 me-2">
             <div class="panel panel-primary">
 
-                {!! Form::open(['route' => ['h5p.library.clear'], 'id'=>'laravel-h5p-update-content-type-cache', 'class'=>'form-horizontal', 'enctype'=>"multipart/form-data"]) !!}
+                <form method="POST" action="{{ route('h5p.library.clear') }}" id="laravel-h5p-update-content-type-cache" class="form-horizontal" enctype="multipart/form-data">
+                    @csrf
+
 
 
                 <div class="panel-body">
@@ -75,7 +79,7 @@
                     <input type="hidden" id="sync_hub" name="sync_hub" value="">
                     <input type="submit" name="updatecache" id="updatecache" class="btn btn-danger btn-large" value="{{ trans('laravel-h5p.library.clear') }}">
                 </div>
-                {!! Form::close() !!}
+                </form>
 
             </div>
 
@@ -169,7 +173,8 @@
 @push( 'h5p-header-script' )
 {{--    core styles       --}}
 @foreach($settings['core']['styles'] as $style)
-{{ Html::style($style) }}
+<link rel="stylesheet" href="{{ $style }}">
+
 @endforeach
 @endpush
 
@@ -180,7 +185,7 @@
 
 {{--    core script       --}}
 @foreach($required_files['scripts'] as $script)
-{{ Html::script($script) }}
+<script src="{{ $script }}"></script>
 @endforeach
 
 

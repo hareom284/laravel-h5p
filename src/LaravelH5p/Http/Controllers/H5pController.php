@@ -71,9 +71,9 @@ class H5pController extends Controller
         $core = $h5p::$core;
         $editor = $h5p::$h5peditor;
 
-        $this->validate($request, [
+        $request->validate([
             'action' => 'required',
-        ], [], [
+        ], [
             'action' => trans('laravel-h5p.content.action'),
         ]);
 
@@ -198,12 +198,12 @@ class H5pController extends Controller
         $core = $h5p::$core;
         $editor = $h5p::$h5peditor;
 
-        $this->validate($request, [
+        $request->validate([
             'action' => 'required',
-        ], [], [
+        ], [
             'action' => trans('laravel-h5p.content.action'),
         ]);
-
+        
         $event_type = 'update';
         $content = $h5p::get_content($id);
         $content['embed_type'] = 'div';

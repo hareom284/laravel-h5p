@@ -6,7 +6,9 @@
     "require": {
         "php": "^8.0",
         "laravel/framework": "^9.19|^10.0",
-        "guzzlehttp/guzzle": "^7.7"
+        "guzzlehttp/guzzle": "^7.7",
+        "h5p/h5p-core": "v1.24",
+        "h5p/h5p-editor": "v1.24"
     },
     "license": "MIT",
     "autoload": {

@@ -111,9 +111,11 @@ class LibraryController extends Controller
 
     public function store(Request $request)
     {
-        $this->validate($request, [
+
+        $request->validate([
             'h5p_file' => 'required||max:50000',
         ]);
+
 
         if ($request->hasFile('h5p_file') && $request->file('h5p_file')->isValid()) {
             Log::info('Yes Good ');
@@ -258,9 +260,7 @@ class LibraryController extends Controller
      */
     private function get_library($id = null)
     {
-        //        if ($this->library !== NULL) {
-        //            return $this->library; // Return the current loaded library.
-        //        }
+    
         if ($id === null) {
             $id = filter_input(INPUT_GET, 'id', FILTER_SANITIZE_NUMBER_INT);
         }

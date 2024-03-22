@@ -16,12 +16,14 @@
 
         {{--    core styles       --}}
         @foreach($settings['core']['styles'] as $style)
-        {{ Html::style($style) }}
+        <link rel="stylesheet" href="{{ $style }}">
+
         @endforeach
 
         @foreach($settings['loadedCss'] as $style)
-        {{ Html::style($style) }}
+        <link rel="stylesheet" href="{{ $style }}">
         @endforeach
+        
     </head>
 
     <body>
@@ -36,11 +38,13 @@
 
         {{--    core script       --}}
         @foreach($settings['core']['scripts'] as $script)
-        {{ Html::script($script) }}
+       <script src="{{ $script }}"></script>
+
         @endforeach
 
         @foreach($settings['loadedJs'] as $script)
-        {{ Html::script($script) }}
+       <script src="{{ $script }}"></script>
+
         @endforeach
 
     </body>

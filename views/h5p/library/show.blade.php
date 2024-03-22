@@ -29,7 +29,7 @@
 
 @push( 'h5p-header-script' )
     @foreach($required_files['styles'] as $style)
-    {{ Html::style($style) }}
+    <link rel="stylesheet" href="{{ $style }}">
     @endforeach
 @endpush
 
@@ -40,7 +40,7 @@
 
     {{--    core script       --}}
     @foreach($required_files['scripts'] as $script)
-    {{ Html::script($script) }}
+    <script src="{{ $script }}"></script>
     @endforeach
 
 @endpush

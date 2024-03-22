@@ -22,7 +22,6 @@ class CreateH5pContentsUserDataTable extends Migration
             $table->boolean('preload')->default(0);
             $table->boolean('invalidate')->default(0);
             $table->dateTime('updated_at')->default(DB::raw('CURRENT_TIMESTAMP'));
-            //			$table->dateTime('updated_at')->default('0000-00-00 00:00:00');
             $table->primary(['content_id', 'user_id', 'sub_content_id', 'data_id'], 'fk_primary');
         });
     }

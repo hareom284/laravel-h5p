@@ -8,7 +8,10 @@
 
         <div class="col-md-12">
 
-            {!! Form::model($content, ['method' => 'PATCH','route' => ['h5p.update', $id], 'class'=>'form-horizontal', 'id'=>'laravel-h5p-form', 'enctype'=>"multipart/form-data"]) !!}
+          <form method="POST" action="{{ route('h5p.update', $id) }}" class="form-horizontal" id="laravel-h5p-form" enctype="multipart/form-data">
+            @csrf
+            @method('PATCH')
+
             <input type="hidden" name="library" id="laravel-h5p-library" value="{{ $library }}">
             <input type="hidden" name="parameters" id="laravel-h5p-parameters" value="{{ $parameters }}">
 
@@ -82,12 +85,8 @@
 
                                 <li>
                                     <label>
-                                        {{ Form::checkbox('frame', true, $display_options[H5PCore::DISPLAY_OPTION_FRAME], [
-                                        'class' => 'h5p-visibility-toggler',
-                                        'data-h5p-visibility-subject-selector' => ".h5p-action-bar-buttons-settings",
-                                        'id' => 'laravel-h5p-title',
-                                        'value' => old('title')
-                                    ]) }}
+                                       <input type="checkbox" name="frame" id="laravel-h5p-frame" class="h5p-visibility-toggler" data-h5p-visibility-subject-selector=".h5p-action-bar-buttons-settings" value="1" {{ $display_options[H5PCore::DISPLAY_OPTION_FRAME] ? 'checked' : '' }}>
+
                                         {{ trans("laravel-h5p.content.display_toolbar") }}
                                     </label>
                                 </li>
@@ -95,12 +94,8 @@
                                 @if(isset($display_options[H5PCore::DISPLAY_OPTION_DOWNLOAD]))
                                 <li>
                                     <label>
-                                        {{ Form::checkbox('download', true, $display_options[H5PCore::DISPLAY_OPTION_DOWNLOAD], [
-                                        'class' => 'h5p-visibility-toggler',
-                                        'data-h5p-visibility-subject-selector' => ".h5p-action-bar-buttons-settings",
-                                        'id' => 'laravel-h5p-title',
-                                        'value' => old('title')
-                                    ]) }}
+                                       <input type="checkbox" name="download" id="laravel-h5p-download" class="h5p-visibility-toggler" data-h5p-visibility-subject-selector=".h5p-action-bar-buttons-settings" value="1" {{ $display_options[H5PCore::DISPLAY_OPTION_DOWNLOAD] ? 'checked' : '' }}>
+
                                         {{ trans("laravel-h5p.content.display_download_button") }}
                                     </label>
                                 </li>
@@ -110,12 +105,8 @@
                                 <li>
 
                                     <label>
-                                        {{ Form::checkbox('embed', true, $display_options[H5PCore::DISPLAY_OPTION_EMBED], [
-                                        'class' => 'h5p-visibility-toggler',
-                                        'data-h5p-visibility-subject-selector' => ".h5p-action-bar-buttons-settings",
-                                        'id' => 'laravel-h5p-title',
-                                        'value' => old('title')
-                                    ]) }}
+                                       <input type="checkbox" name="embed" id="laravel-h5p-embed" class="h5p-visibility-toggler" data-h5p-visibility-subject-selector=".h5p-action-bar-buttons-settings" value="1" {{ $display_options[H5PCore::DISPLAY_OPTION_EMBED] ? 'checked' : '' }}>
+
                                         {{ trans("laravel-h5p.content.display_embed_button") }}
                                     </label>
                                 </li>
@@ -125,12 +116,8 @@
                                 <li>
 
                                     <label>
-                                        {{ Form::checkbox('copyright', true, $display_options[H5PCore::DISPLAY_OPTION_COPYRIGHT], [
-                                        'class' => 'h5p-visibility-toggler',
-                                        'data-h5p-visibility-subject-selector' => ".h5p-action-bar-buttons-settings",
-                                        'id' => 'laravel-h5p-title',
-                                        'value' => old('title')
-                                    ]) }}
+                                        <input type="checkbox" name="copyright" id="laravel-h5p-copyright" class="h5p-visibility-toggler" data-h5p-visibility-subject-selector=".h5p-action-bar-buttons-settings" value="1" {{ $display_options[H5PCore::DISPLAY_OPTION_COPYRIGHT] ? 'checked' : '' }}>
+
                                         {{ trans("laravel-h5p.content.display_copyright_button") }}
                                     </label>
                                 </li>
@@ -151,24 +138,19 @@
                 <div class="d-flex justify-content-between w-100">
 
                     <button class="btn btn-danger h5p-delete" data-delete="{{ route('h5p.destroy', $id) }}" type="button">
-                        {{ __('strings.delete') }}
+                        Delete
                     </button>
 
                     <div>
                     <a href="{{ route('h5p.index') }}" class="btn btn-default"><i class="fa fa-reply"></i> {{ trans('laravel-h5p.content.cancel') }}</a>
 
-                    {{ Form::submit(trans('laravel-h5p.content.save'), [
-                "class"=>"btn btn-primary",
-                "data-loading-text" => trans('laravel-h5p.content.saving'),
-                'id' => 'save-button',
-                        ]) }}
+                   <button type="submit" class="btn btn-primary" id="save-button" data-loading-text="{{ trans('laravel-h5p.content.saving') }}">{{ trans('laravel-h5p.content.save') }}</button>
                     </div>
 
                 </div>
 
             </div>
-
-            {!! Form::close() !!}
+          </form>
 
         </div>
 

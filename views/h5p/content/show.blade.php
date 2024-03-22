@@ -53,11 +53,12 @@
 
 {{--    core script       --}}
 @foreach($settings['core']['scripts'] as $script)
-{{ Html::script($script) }}
+<script src="{{ $script }}"></script>
+
 @endforeach
 
 @foreach($settings['loadedJs'] as $script)
-{{ Html::script($script) }}
+<script src="{{ $script }}"></script>
 @endforeach
 
 
