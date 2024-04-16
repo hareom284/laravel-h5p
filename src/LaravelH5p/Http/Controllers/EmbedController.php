@@ -2,9 +2,9 @@
 
 namespace Hareom284\LaravelH5p\Http\Controllers;
 
-use Illuminate\Routing\Controller;
 use Hareom284\LaravelH5p\Events\H5pEvent;
 use Illuminate\Http\Request;
+use Illuminate\Routing\Controller;
 use Illuminate\Support\Facades\App;
 
 class EmbedController extends Controller

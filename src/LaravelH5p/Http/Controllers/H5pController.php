@@ -2,13 +2,13 @@
 
 namespace Hareom284\LaravelH5p\Http\Controllers;
 
-use Illuminate\Routing\Controller;
 use H5pCore;
 use Hareom284\LaravelH5p\Eloquents\H5pContent;
 use Hareom284\LaravelH5p\Eloquents\H5pTmpfile;
 use Hareom284\LaravelH5p\Events\H5pEvent;
 use Hareom284\LaravelH5p\Exceptions\H5PException;
 use Illuminate\Http\Request;
+use Illuminate\Routing\Controller;
 use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Auth;
 use Response;
@@ -203,7 +203,7 @@ class H5pController extends Controller
         ], [
             'action' => trans('laravel-h5p.content.action'),
         ]);
-        
+
         $event_type = 'update';
         $content = $h5p::get_content($id);
         $content['embed_type'] = 'div';

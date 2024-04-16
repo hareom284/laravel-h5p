@@ -2,7 +2,6 @@
 
 namespace Hareom284\LaravelH5p\Eloquents;
 
-use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Model;
 
 class H5pContentsUserData extends Model
