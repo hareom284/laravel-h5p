@@ -1,9 +1,11 @@
 <?php
 
+use Illuminate\Support\Facades\Route;
+
 Route::prefix('admin/h5p')->group(function () {
     Route::group(['middleware' => ['web']], function () {
         if (config('laravel-h5p.use_router') == 'EDITOR' || config('laravel-h5p.use_router') == 'ALL') {
-            Route::resource('h5p', "Hareom284\LaravelH5p\Http\Controllers\H5pController")->middleware('auth');
+            Route::middleware(['auth'])->resource('h5p', "Hareom284\LaravelH5p\Http\Controllers\H5pController");
             Route::group(['middleware' => ['auth']], function () {
                 Route::get(
                     'library',
