@@ -1,6 +1,5 @@
 {
     "name": "hareom284/laravel-h5p",
-    "version": "2.0",
     "description": "This is laravel h5p plugin that use for content edition",
     "type": "library",
     "require": {
